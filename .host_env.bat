@@ -8,12 +8,15 @@ set CUR_DIR=%~dp0
 :: 配置OpenOCD路径（注意替换为你的实际路径，反斜杠可保留或用正斜杠）
 set OPENOCD_ROOT=%CUR_DIR%\host-tools\openocd\OpenOCD-20210519-0.11.0
 :: 配置QEMU路径
-set QEMU_ROOT=%CUR_DIR%\host-tools\qemu\win\w64-202107062
-set QEMU_BIN_PATH=%CUR_DIR%\host-tools\qemu\win\w64-202107062
+set QEMU_ROOT=%CUR_DIR%\host-tools\qemu\w64-202107062
+set QEMU_BIN_PATH=%CUR_DIR%\host-tools\qemu\w64-202107062
 set NINJA_PATH=%CUR_DIR%\host-tools\ninja
 set DTC_PATH=%CUR_DIR%\host-tools\dtc-msys2\bin
 set CMAKE_PATH=%CUR_DIR%\host-tools\CMake\bin
-set PATH=%OPENOCD_ROOT%;%QEMU_ROOT%;%NINJA_PATH%;%DTC_PATH%;%CMAKE_PATH%;%CUR_DIR%\host-tools;%PATH%
+set PYTHON_HOME=%CUR_DIR%\host-tools\python\python-3.12.3
+set PATH=%OPENOCD_ROOT%;%QEMU_ROOT%;%NINJA_PATH%;%DTC_PATH%;%CMAKE_PATH%;%PYTHON_HOME%;%PYTHON_HOME%\Scripts;%CUR_DIR%\host-tools;%PATH%
+set ZEPHYR_TOOLCHAIN_VARIANT=zephyr
+set ZEPHYR_SDK_INSTALL_DIR=F:\workspace\src\zephyr-src\zephyr-sdk-0.16.8
 
 if exist ".\.venv\" (
 	@.\.venv\Scripts\activate.bat
