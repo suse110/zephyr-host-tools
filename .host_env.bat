@@ -1,5 +1,4 @@
 @echo off
-chcp 65001 > nul 2>&1  :: 解决中文乱码问题
 echo "zephyr 3.7.0 Tool Min. Version"
 echo "  CMake  3.20.5"
 echo "  Python 3.10"
