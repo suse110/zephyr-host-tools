@@ -7,7 +7,7 @@ echo "  DTC    1.4.6"
 
 set CUR_DIR=%~dp0
 :: 配置OpenOCD路径（注意替换为你的实际路径，反斜杠可保留或用正斜杠）
-set OPENOCD_ROOT=%CUR_DIR%\openocd\OpenOCD-20210519-0.11.0
+set OPENOCD_ROOT=%CUR_DIR%\host-tools\openocd\OpenOCD-20210519-0.11.0
 :: 配置QEMU路径
 set QEMU_ROOT=%CUR_DIR%\host-tools\qemu\win\w64-202107062
 set QEMU_BIN_PATH=%CUR_DIR%\host-tools\qemu\win\w64-202107062
